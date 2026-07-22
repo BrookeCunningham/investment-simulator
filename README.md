@@ -54,3 +54,8 @@ GET  /trade/history
 GET  /stock/quote/{symbol}
 GET  /stock/history/{symbol}
 ```
+
+https://www.geeksforgeeks.org/postgresql/install-postgresql-on-windows/
+prisma = sqlalchemy
+express = flask/fastapi/django
+postgresql = same
