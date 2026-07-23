@@ -15,6 +15,6 @@ class Trade(Base):
     user_id = Column(Integer, ForeignKey("users.user_id"), nullable=False, index=True)
     symbol = Column(String, nullable=False,index=True)
     action= Column(Enum(TradeAction), nullable=False)
-    quantity = Column(Numeric(12,2), nullable=False)
+    quantity = Column(Numeric(12,4), nullable=False)
     price = Column(Numeric(12,4), nullable=False)
     executed_at = Column(DateTime, server_default=func.now(), index=True)
