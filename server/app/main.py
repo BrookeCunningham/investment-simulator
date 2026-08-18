@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
-from app.routes import auth, stock
+from app.routes import auth, stock, trade, portfolio
 
 
 app = FastAPI(title="Papertrak API")
@@ -14,8 +13,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 app.include_router(auth.router)
 app.include_router(stock.router)
+app.include_router(trade.router)
+app.include_router(portfolio.router)
 
 
 @app.get("/")
